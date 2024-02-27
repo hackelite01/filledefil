@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>FilleDefil</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <!--favicon-->
+    <link href="logo.png" rel="icon">
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <!-- BOOTSTRAP CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <p id="off" style="background-color: #A46507;">Get one for your 🤍 Now!</p><br>
+    <nav>
+        <div class="navbar">
+            <i class="bx bx-menu"></i>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" height="75" /></a>
+            </div>
+            <div class="nav-links">
+                <div class="sidebar-logo">
+                    <span class="logo-name"><img src="logo.png" height="60" /></span>
+                    <i class="bx bx-x"></i>
+                </div>
+                <ul class="links">
+                    <li><a href="index.html#about">ABOUT US</a></li>
+                    <li><a href="products.html">COLLECTION</a></li>
+                    <li><a href="products.html#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="cart-sidebar" id="cartSidebar">
+        <h2>Cart</h2>
+        <div class="cart-content">
+            <div class="cart-card">
+                <div class="cart-img">
+                    <img id="card-product-img" src="">
+                </div>
+                <div class="cart-details">
+
+                </div>
+            </div>
+        </div>
+        <p><span id="cart-total"></span></p>
+        <button type="button" class="btn-primary">Buy Now</button>
+    </div>
+    <!-- navbar end -->
+    <!--slider-->
+    <div class="head-img">
+        <img src="images/FilleDefil.png">
+    </div>
+    <!--slider end-->
+    <!--serivices promotion-->
+    <div class="con">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+
+            <div class="col">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABHRJREFUaEPtmEuoVlUUx39CGiGaaQ4ENXuggyaGgi8i0IZGpT0sG9TEynw/e2dGaS+ptMhJozCJwgoNKcKSUsNCm/RAMiVo0lObGAZ1/rC2nHvY6+x9vu/cexVck8t392v9z1r/9RrAOS4DznH9OQ+gvy3Ymxa4EngWGA88AezoDbC9AWAE8CRwL3BBSekvgEXA4TaBtAlgELAceBgY6ij5X2GRbcAa4Jc2gLQBQHfcCTwDjM1U6hTwkp35O/NMdFu3AK4DXgQmOUqIA/8CjzjrvwFPAa90CqJTACKoFL/RefgT4H7giK2PATYCdxT8iL35A7AWeL8pkKYALgWeLvx3Qc1DNwA7nfXJwMvAdGf9c2BJ8WEO5QLJBZBD0PDmN8BS4LMaJeZYiL0qsqcR0VMAOiFo0ElxfxVw1AEyEHgAeKzgwPDIniyi1wGYAWwBJjoKvGHuNN/8d7CzT1xRXvCijULuOgMjS1flVzu/1QJCj/UYgNEW4uY6Csm/Fce/K62PspB4t3Pmd+Bx4LUatxoHPA/c4uyRJWWx3eX1GICPgesjlxw0l9hbo8Q1RtJrnT3fWrL7qOYOWV45QoSvitzqohQAkSgmX1kp8GXN42FJ1nsOuMLZ+2HhUiuB7yPrU8x1YwC0vcdHj1nAAxDeegdYDRxLALnQopGSWKy0UIJ73Qq9PwC50AuA57rhua4BhIs2GblOJoCMtGyr4i4mfwK7gLsyLNuRBfYD05zL/zLlBCYlVxs/ZqU2ltYPFKSdWtnf2AI6oMSjCOH59I/ACuCDDOVmA29XyVg5dxx4ENheuFjVpTsCEO5XGFvvJB7tUc2vLPy1A0QRRqWEV/zp2ENWN4UrWgWgS0VIZc/FgIhalVgpcJlZ8NYMC1UDS+sAgg5SaoNVmJ5e6hGkkL5qrvQZgKCQSg2FQ8XvJqLWUuFYibMsfQ4gPH5TqYmvA/JTUdM8CrxlBK11kbZJnPrCauIV7zWFUPwvi7ov9RKvFh3a6dLCWQUg6CWin6gAuLgItbGkd1YCkO4pxQK+sO9Ty+z6W5Zei0Ipd8oFsMdRvAow/G6cyDzTtwWg7p6YKzYGUNsR1byea4HYFXXBIAlAZbKSVFU0+lB98l7q09t6pwA0qtE8aULkHYXgHvVYrB+YCbxbdEXDHEVV7ywD1ODUSVMAamDUialeiomi2s2AOHNGvKb+EuthVbxpelAVKadKUcOon50HcwFo6KUvPs8ZeilnhMZHvUMPSY1VUl3SP8Bm6wmqMT4FIFUUSlGNZlRuqFyPSgpAOJTqU9USqszW1CFkWQ+ALLrQLBybB+lN1Un3Acn+OxdAAHKb1eqXOx9EX0pEV98cA6CRiWakmq3GRAFE4/lYI9OVBaqH1X1pGDXEUWRfZP4Z+184rqGXLKimvpE0tUD58hTRcxSpJWjOBd0ACPeniO7pkSRoXwHIJXrYl03QvgYQ3rvdWs0q0RsTtL8AhHc1nbjHfrzZCUH7G0DO+13vaYPEXSvRzQXnAXTz9do4+z+hneoxKLYh/wAAAABJRU5ErkJggg=="
+                />
+                <div class="">FREE SHIPPING
+                    <P style="color: grey;font-size: x-small;">On Orders Above Rs. 999</P>
+                </div>
+            </div>
+            <div class="col">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAuRJREFUaEPtmEvIT0EYxn+fHUKiyC2h5K4syDUSckvYEImPnSwsLMROycrCRm7JJZFCIRIbFqTcCikb91tJinIp5qmzmO84Z86c78xpvv/nP8sz77zv88y8877PmRYafLQ0OH6aBGKfYPMEmidQcQc6ZQqtBHYBIytuTujlz4AdwFnbcdYJPAZGh44eyN8TYEwRgT+BgtXlps2mZ53Af0HgHTAg8Ba/B/p5+AxyApeAxR7ByphcBeZ5LAhCYAGggCHHinSFyXFemcAFYFlI5JavG8DsAt+VCFwD1gAfHUGGAKuAhcCExO4+cNn0llPAa8fa/sBxYK7DpjSBN8Bt4DxwwuG4ZxJ8qcNGFe4MsAH47rDTJi0HJmcUi9IEfORGN+COyeGxnqkl2xnALw/7dFmvhcAxYK0HGNtkL7DVY03tBMaZ436UAvIBaE1ORVNTgcNAX8vuJzAMUIq6Ru0E9gGbLQQCPxFQY7LHoIRob+vjdmB3bALPzeUdboHQBTyZA2qTuZQHrLmbwMzYBFRNulogJDEkNbLGYFOBXloTn4E+sQl8BXpYIAYCb3NAKY1eWXNa2ys2gYfAeAvEOnM5VZWyhi72IWviHjApNoE9pilts0B8SvpBultr9x+kUkZ/fjtjE9Cv51No80imFNKFVQfvAkwH9qfk8m/T2UcAL2ITUPwjBsj6AiDpaZXfLR5rau8DwtAduAuM8gAkE0mJWcAPD/vKBJQOSoVzBWJO1UT1f5EDlMCcNop0I/DNYSdZIsk+JYSYs+NITsu5um3eGAqsNqT10yM5LcGmSnUxAZ9XYuVPclqbMMfhv7SYS/u6XqDXPbIi1+QWMK3AQWUC8q8Le7QK0oy1SquDHj6DEFA6LPEIVsbkCjDfY0EQAspjSYaQ44uHrFC8IARCAi/rq/MTaPjHXT2v6y9JOqUjDe/n9Y4EuhCLz5NJoZOYBk0CMXf/n6YQG0x74jdTqD27FnJNw5/AX/9rkTEC1771AAAAAElFTkSuQmCC"
+                />
+                <div class=""> EFFECTIVE PRICE
+                    <P style="color: grey;font-size: x-small;">100% Money Back Guarantee</P>
+                </div>
+            </div>
+            <div class="col">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAqFJREFUaEPtl8vrTVEUxz+/MmCEPEK/GCgTA0oeKRNDZcCQ5FlSHiUDjzIgMaLIbyBkgJlC+Q8oRZFMRCKv5BESBor91b7a9t3nnL2Pe+85v9qrbrezH2uv73qvIUY5DY1y+ckAmrZgXQtMAfYAC4D5wE/gDnANOFsBah2wClgKjAHu2bvHgfepCqkDQAKcAsYXPHYd0Jkvgf0rwOqCex+BTVYJ0ThSAewATkZwvwks885dAtZE3F0LXI449+dICoDZwJNYxhboLnt+L3A08u43YFasO6UAGAG2eUIcBrQ+DTgErPT2lwMPgefAOGfvEbDB/J4ZQbcDB7x7BwHxrqQUAK+B6Q7H3SYOTngv3AfmOWsPTJBfBSRQhz7Z4H/qrO0Hjjjfd4GFldInutAvj+Fk4IO3poykrFJG+4Bj3gFZ8I2z9hmY0GsA383DYx2mRdY7Z7NJ6H0JNmxS8NfApqugH57LFWL5HxeaAzwOcF4M3C548bT1eX97ro2VzvoLYGavLXADWOEwlaZ3AsoaPilwJZRPi2zRctdVTxRLG51FxY2KXSUVWUA+qYq6xBStSZVc+ntAcXYL2AK8858KAZDwCkT9t4nkVkoSqth/KQTgovFtVcM20hmTrbZWAfDzfZuAdAV3yAJ+vk/JVC7YgfDJAEr8K1vAKqdUESEXegXMaFPkOrJINrUipWn0ArC+pQDOA5urAGjeVSswtWUgXtpC9k8HXJQi5UKdVmJiw0AksEZUFbC3Ma2Ef6ZuNhnIvZgiNRBBHK0lvZcB9KGQZQvkII5pAXrlejmIe6XJnEab1mS2QLZAtwaSKmo/XajJCa1rAqvTTjc5oXVNYHUANDWhBSewOgB0Z5ATWukEVhdAw1Nl8fMxvVBrhZdgGUDT5vkNv6GZMev0Y7EAAAAASUVORK5CYII="
+                />
+                <div class="">SPECIAL GIFT CARD
+                    <P style="color: grey;font-size: x-small;">Offer Special Bonuses With Gift</P>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--categories-->
+    <div class="container" id="collection">
+        <div class="flower">
+            <img src="images/Rectangle 5.png" alt="">
+        </div>
+        <div class="heading">
+            <h1>Categories</h1>
+            <p>Check out our complete range of craft works</p>
+        </div>
+        <div class="parent">
+            <div class="div1"><img src="images/images/2.jpg" onclick="window.location.href='products.html#div8'">KEY CHAIN</div>
+            <div class="div2"><img src="images/images/11.png" onclick="window.location.href='products.html#clothings'">FLOWERS</div>
+            <div class="div3"><img src="images/images/36.jpg" onclick="window.location.href='products.html#shoes'"> BOWS</div>
+            <div class="div4"><img src="images/images/13.png" onclick="window.location.href='products.html#home'">SCRUNCHIES</div>
+            <div class="div5"><img src="images/images/34.jpg" onclick="window.location.href='products.html#jewelary'"></div>
+            <div class="div6"><img src="images/images/20.jpg" onclick="window.location.href='products.html#plants'"></div>
+            <div class="div7"><img src="images/images/3.jpg" onclick="window.location.href='products.html#bags'">CUSTOM</div>
+            <div class="div8"><img src="images/images/7.png" onclick="window.location.href='products.html#wall'">NECKLACE</div>
+        </div>
+    </div>
+    <!--categories end-->
+    <!--galary-->
+    <div class="gallery" id="galary">
+        <div class="products-section">
+            <!--jewellery-->
+            <div id="jewelary">
+                <section class="--galary">
+
+                    <div class="product-cards">
+                        <section class="product-cards-cards">
+                            <div class="grow1" id="collom-1">
+                                <figure>
+                                    <img id="products-img" src="images/images/1.jpg">
+                                </figure>
+                            </div>
+                            <div class="grow1" id="collom-2">
+                                <figure>
+                                    <img id="products-img" src="images/images/2.jpg">
+
+                                </figure>
+                            </div>
+                            <div class="grow1" id="collom-3">
+                                <figure>
+                                    <img id="products-img" src="images/images/3.jpg">
+
+                                </figure>
+                            </div>
+                            <div class="grow1" id="collom-4">
+                                <figure>
+                                    <img id="products-img" src="images/images/4.jpg">
+
+                                </figure>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+            <!--clothings-->
+            <section class="--galary" id="clothings">
+
+                <div class="product-cards">
+                    <section class="product-cards-cards">
+                        <div class="grow1" id="collom-1">
+                            <figure>
+                                <img id="products-img" src="images/images/5.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-2">
+                            <figure>
+                                <img id="products-img" src="images/images/6.png">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-3">
+                            <figure>
+                                <img id="products-img" src="images/images/7.png">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-4">
+                            <figure>
+                                <img id="products-img" src="images/images/8.png">
+
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!--planters-->
+            <section class="--galary" id="plants">
+
+                <div class="product-cards">
+                    <section class="product-cards-cards">
+                        <div class="grow1" id="collom-1">
+                            <figure>
+                                <img id="products-img" src="images/images/9.png">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-2">
+                            <figure>
+                                <img id="products-img" src="images/images/10.png">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-3">
+                            <figure>
+                                <img id="products-img" src="images/images/11.png">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-4">
+                            <figure>
+                                <img id="products-img" src="images/images/12.png">
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!--shoes-->
+            <section class="--galary" id="shoes">
+
+                <div class="product-cards">
+                    <section class="product-cards-cards">
+                        <div class="grow1" id="collom-1">
+                            <figure>
+                                <img id="products-img" src="images/images/13.png">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-2">
+                            <figure>
+                                <img id="products-img" src="images/images/14.png">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-3">
+                            <figure>
+                                <img id="products-img" src="images/images/15.png">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-4">
+                            <figure>
+                                <img id="products-img" src="images/images/16.png">
+
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!--bags-->
+            <section class="--galary" id="bags">
+
+                <div class="product-cards">
+                    <section class="product-cards-cards">
+                        <div class="grow1" id="collom-1">
+                            <figure>
+                                <img id="products-img" src="images/images/16.png">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-2">
+                            <figure>
+                                <img id="products-img" src=" images/images/17.png">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-3">
+                            <figure>
+                                <img id="products-img" src="images/images/18.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-4">
+                            <figure>
+                                <img id="products-img" src="images/images/19.jpg">
+
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+
+            </section>
+            <!--home decor-->
+            <section class="--galary" id="home">
+
+                <div class="product-cards">
+                    <section class="product-cards-cards">
+                        <div class="grow1" id="collom-1">
+                            <figure>
+                                <img id="products-img" src="images/images/20.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-2">
+                            <figure>
+                                <img id="products-img" src="images/images/21.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-3">
+                            <figure>
+                                <img id="products-img" src="images/images/22.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-4">
+                            <figure>
+                                <img id="products-img" src="images/images/23.jpg">
+
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+
+            </section>
+            <!--wall decor-->
+            <section class="--galary" id="wall">
+
+                <div class="product-cards">
+                    <section class="product-cards-cards">
+                        <div class="grow1" id="collom-1">
+                            <figure>
+                                <img id="products-img" src="images/images/24.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-2">
+                            <figure>
+                                <img id="products-img" src="images/images/25.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-3">
+                            <figure>
+                                <img id="products-img" src="images/images/26.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-4">
+                            <figure>
+                                <img id="products-img" src="images/images/27.jpg">
+
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+
+            </section>
+            <!--other-->
+            <section class="--galary">
+
+                <div class="product-cards">
+                    <section class="product-cards-cards">
+                        <div class="grow1" id="collom-1">
+                            <figure>
+                                <img id="products-img" src="images/images/28.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-2">
+                            <figure>
+                                <img id="products-img" src="images/images/29.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-3">
+                            <figure>
+                                <img id="products-img" src="images/images/30.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-4">
+                            <figure>
+                                <img id="products-img" src="images/images/31.jpg">
+
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+
+            </section>
+            <!--ajrak-->
+            <section class="--galary">
+
+                <div class="product-cards">
+                    <section class="product-cards-cards">
+                        <div class="grow1" id="collom-1">
+                            <figure>
+                                <img id="products-img" src="images/images/32.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-2">
+                            <figure>
+                                <img id="products-img" src="images/images/33.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-3">
+                            <figure>
+                                <img id="products-img" src="images/images/34.jpg">
+
+                            </figure>
+                        </div>
+                        <div class="grow1" id="collom-4">
+                            <figure>
+                                <img id="products-img" src="images/images/35.jpg">
+
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!--ajrak end-->
+        </div>
+        <!--promotion-->
+
+    </div>
+    <!--galary end-->
+
+    <br>
+    <!--footer-->
+    <footer>
+        <div class="footer-main">
+            <div class="colo-1">
+                <h4 id="contact" class="contact">Contact</h4>
+                <p><strong>Phone:</strong> +91 96651 51755</p>
+                <p><strong>Address:</strong> Nagpur, Maharashtra</p>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        <a style="margin-left: 50px;" href="https://instagram.com/filledefil" target="_blank"><i class="fab fa-instagram" style="font-size: 30px;"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="footer-p">
+            <p>Copyright © 2024
+                <a href="https://github.com/hackelite01" style="font-weight: bolder;">Mayank Rajput</a>. All rights reserved.</p>
+        </div>
+    </footer>
+    <!--product detaila-->
+    <div class="popup" id="quickViewPopup">
+        <div class="popup-content">
+            <div id="popupCloseButton">&times;</div>
+            <div class="pop-up-card">
+                <div class="popup-card-img">
+                    <img id="popup-product-img" src="" alt="Product Image">
+                </div>
+                <div class="popup-card-details">
+                    <h3 id="popup-product-name"></h3>
+                    <h4 id="popup-product-price"></h4>
+                    <p id="popup-product-description"></p>
+                    <button type="button" class="btn-primary">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-contentt">
+            <button class="dismiss" type="button">×</button>
+            <div class="header">
+                <div class="image">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M20 7L9.00004 18L3.99994 13" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="content">
+                    <span class="title">Order validated</span>
+                    <p class="message">Thank you for your purchase. Your package will be delivered within 2 days of your purchase.
+                    </p>
+                </div>
+                <div class="actions">
+                    <button class="history" type="button">History</button>
+                    <button class="track" type="button">Track my package</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var cards = document.querySelectorAll('.grow1');
+
+        // Attach click event to each card
+        cards.forEach(function(card, index) {
+            card.addEventListener('click', function() {
+                // Get the relevant data from the clicked card
+                var productName = card.querySelector('p#products-name').innerText;
+                var price = card.querySelector('p#products-price').innerText;
+                var productImage = card.querySelector('img#products-img').getAttribute('src');
+                var productDescription = card.querySelector('p#products-description').innerText;
+
+                // Open the popup and set the content dynamically
+                openPopup(productName, price, productImage, productDescription);
+            });
+        });
+
+        function openPopup(productName, price, productImage, productDescription) {
+            // Set the content dynamically based on the clicked card
+            var popupProductName = document.getElementById('popup-product-name');
+            var popupProductPrice = document.getElementById('popup-product-price');
+            var popupProductImage = document.getElementById('popup-product-img');
+            var popupProductDescription = document.getElementById('popup-product-description');
+
+            popupProductName.innerText = productName;
+            popupProductPrice.innerText = price;
+            popupProductImage.src = productImage;
+            popupProductDescription.innerText = productDescription;
+
+            // Display the popup
+            document.getElementById('quickViewPopup').style.display = 'flex';
+        }
+
+        // Close the popup when the close button is clicked
+        var closeButton = document.getElementById('popupCloseButton');
+        closeButton.addEventListener('click', function() {
+            var popup = document.getElementById('quickViewPopup');
+            popup.style.display = 'none';
+        });
+        // cart
+        document.getElementById('cartIcon')
+            .addEventListener('click', function() {
+                document.getElementById('cartSidebar').style.right = '0';
+            });
+
+        document.getElementById('cartSidebar')
+            .addEventListener('mouseleave', function() {
+                document.getElementById('cartSidebar').style.right = '-300px';
+            });
+        document.addEventListener('DOMContentLoaded', function() {
+            let cartProducts = [];
+
+            // Select all "Add to cart" buttons
+            const addToCartButtons = document.querySelectorAll('.btn-primary');
+
+            // Add click event listener to each button
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Get the product details from the clicked card
+                    const productCard = this.closest('.grow1');
+                    const productName = productCard.querySelector('#products-name').textContent;
+                    const productPrice = productCard.querySelector('#products-price').textContent; // Keep the price as a string
+                    const productImage = productCard.querySelector('#products-img').src;
+
+                    // Add the selected product to the cart
+                    cartProducts.push({
+                        name: productName,
+                        price: productPrice,
+                        image: productImage
+                    });
+
+                    // Update the cart content with the selected products
+                    updateCartSidebar();
+                });
+            });
+
+            function updateCartSidebar() {
+                const cartContent = document.querySelector('.cart-content');
+                cartContent.innerHTML = '';
+
+                let totalCartValue = 0;
+
+                cartProducts.forEach(product => {
+                    // Convert to an integer for calculation
+                    const priceInt = parseInt(product.price.replace('RS ', '').replace(',', ''));
+                    totalCartValue += priceInt;
+
+                    // Create elements for the product in the cart
+                    const productCard = document.createElement('div');
+                    productCard.classList.add('cart-card');
+                    productCard.innerHTML = `
+        <div class="cart-img" style="height: 100px;">
+          <img src="${product.image}" style="height: 100%;">
+        </div>
+        <div class="cart-details">
+          <h4>${product.name}</h4>
+          <h6>${product.price}</h6>
+        </div>
+      `;
+                    cartContent.appendChild(productCard);
+                });
+
+                // Update the total cart value
+                const cartTotal = document.getElementById('cart-total');
+                cartTotal.textContent = 'Total: RS ' + totalCartValue.toLocaleString(); // Format the total value with commas
+
+                // Display the cart sidebar
+                const cartSidebar = document.getElementById('cartSidebar');
+                cartSidebar.style.display = 'block';
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('myModal');
+            const dismissButton = modal.querySelector('.dismiss');
+            const buyNowButton = document.querySelector('.btn-primary');
+
+            buyNowButton.addEventListener('click', function() {
+                modal.style.display = 'block';
+            });
+
+            dismissButton.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+
+
+    <!--bootstrap cdn JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
